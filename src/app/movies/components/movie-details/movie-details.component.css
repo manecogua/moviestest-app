@@ -23,13 +23,4 @@
 }
 .details ul li {display: inline;}
 .details ul li + li::before{content: " | "; padding: 0 2em;}
-
-    .gridContainer > div {cursor: pointer;}
-  
-  
-  
-  .gridContainer small{
-      display: block;
-  }
-  
   
