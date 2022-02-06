@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesModule } from './movies/movies.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,10 @@ import { MoviesModule } from './movies/movies.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    MoviesModule
+    MoviesModule,
+    RouterModule.forRoot([
+      {path: '', redirectTo: '/movies', pathMatch: 'full'}
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]

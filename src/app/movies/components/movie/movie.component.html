@@ -1,10 +1,12 @@
 <div class="gridContainer">
     <div *ngFor="let item of movies.data">
-        <div><img class="poster" src="https://image.tmdb.org/t/p/w500/{{ item.poster_path }}"></div>
-        <div>
-            <h5>{{ item.title }}</h5>
-            <small>{{ item.release_date }}</small>
-        </div>
+        <a routerLink="/movie-detail/{{item.id}}">
+            <div><img class="poster" src="https://image.tmdb.org/t/p/w500/{{ item.poster_path }}"></div>
+            <div>
+                <h5>{{ item.title }}</h5>
+                <small>{{ item.release_date }}</small>
+            </div>
+        </a>
     </div>
 </div>
 
