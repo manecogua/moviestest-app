@@ -1,0 +1,17 @@
+.gridContainer{
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  align-items: end;
+}
+
+.gridContainer > div {cursor: pointer;}
+
+.gridContainer h5{ margin: 0.25em 0}
+
+.gridContainer small{
+    display: block;
+}
+
+.poster{
+    max-width: 120px;
+}
