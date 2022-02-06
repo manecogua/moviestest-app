@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+body{width: 100%; margin: 0 !important; padding: 0;}
+
+#app{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        'header'
+        'content'
+        'footer';
+}
+
+#app > header {
+    grid-area: header;
+    background-color: darkslategray;
+}
+
+#app > content {
+    grid-area: main;
+    overflow: auto;
+}
+
+#app > footer {
+    grid-area: footer;
+}
+
+.tools{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 12px;
+}
+
+.tools > div{
+    flex: 2 1;
+    justify-content: flex-start;
+}
+
+.tools ul {list-style: none;}
+.tools ul li {display: inline; float: right; padding-left: 1em;}
