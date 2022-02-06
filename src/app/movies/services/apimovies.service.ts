@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Responseapi } from '../models/responseapi';
+import { Movie } from '../models/movie';
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +17,9 @@ export class ApiMoviesService {
   public getMovies() : Observable<Responseapi>{  
 		return this.httpClient.get<Responseapi>(this.API_URL+'/movie/top_rated?'+this.API_KEY);  
 	}
+
+  public getMovie(id : string) : Observable<Responseapi>{  
+		return this.httpClient.get<Responseapi>(this.API_URL+'/movie/'+id+'?'+this.API_KEY);  
+	}
+
 }

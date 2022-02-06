@@ -1,0 +1,35 @@
+.gridMovie {
+    display: flex;
+    grid-template-columns: 30% 70%;
+  }
+  .box1 {
+    align-self: stretch;
+  }
+  .box2 {
+    align-self: flex-start;
+  }
+
+.poster img{
+    max-width: 90%;
+}
+
+.infoMovie h3{ font-size: 3em; margin: 0.25em 0}
+
+.details {padding: 0.5em 0 2em;}
+.details ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.details ul li {display: inline;}
+.details ul li + li::before{content: " | "; padding: 0 2em;}
+
+    .gridContainer > div {cursor: pointer;}
+  
+  
+  
+  .gridContainer small{
+      display: block;
+  }
+  
+  
