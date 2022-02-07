@@ -1,3 +1,5 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 <div id="app">
@@ -9,13 +11,12 @@
           <li><span class="material-icons md-light">logout</span></li>
           <li><span class="material-icons md-light">settings</span></li>
           <li><span class="material-icons md-light">favorite</span></li>
-          <li><span class="material-icons md-light">search</span><input type="text" /></li>
         </ul>
       </div>
     </div>
   </header>
-  <router-outlet></router-outlet>
-  <footer>
-
-  </footer>
+  <content>
+    <router-outlet></router-outlet>
+  </content>
+  <footer></footer>
 </div>

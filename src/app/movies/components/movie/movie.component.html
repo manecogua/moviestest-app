@@ -1,8 +1,9 @@
-<div>
-    <span class="material-icons md-light">search</span><input type="text" id="search" (keyup)="filterMovies($event)" />
+<div class="divSearcher">
+    <div>
+        <span class="material-icons md-light">search</span><input type="text" id="search" (keyup)="filterMovies($event)" />
+    </div>
 </div>
 <div class="gridContainer">
-    <div *ngIf="movies!"></div>
     <div *ngFor="let item of movies">
         <a routerLink="/movie-detail/{{item.id}}">
             <div><img class="poster" src="https://image.tmdb.org/t/p/w500/{{ item.poster_path }}"></div>
