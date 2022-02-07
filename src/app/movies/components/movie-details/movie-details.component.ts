@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiMoviesService } from '../../services/apimovies.service';
 import { Movie } from '../../models/movie';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-details',
@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class MovieDetailsComponent implements OnInit {
 
   movie : any;
-  constructor(private apiMovieService: ApiMoviesService, private route: ActivatedRoute) { }
+  constructor(private apiMovieService: ApiMoviesService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const movieId = ''+this.route.snapshot.paramMap.get('id');
@@ -30,6 +30,10 @@ export class MovieDetailsComponent implements OnInit {
         }
       }
     );
+  }
+
+  goBack(){
+    this.router.navigate(['/movies']);
   }
 
 }
