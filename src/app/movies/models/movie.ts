@@ -1,4 +1,5 @@
 export class Movie {
+    id: number;
     title: string;
     year: string;
     duration: string;
@@ -7,7 +8,8 @@ export class Movie {
     voteAvg: string;
     genres: any;
   
-    constructor(title: string, year: string, duration: string, info: string, pathPoster: string, voteAvg: string, genres: any) {
+    constructor(id: number,title: string, year: string, duration: string, info: string, pathPoster: string, voteAvg: string, genres: any) {
+      this.id = id;
       this.title = title;
       this.year = year;
       this.duration = duration;

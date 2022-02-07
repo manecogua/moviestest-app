@@ -17,16 +17,17 @@ export class MovieDetailsComponent implements OnInit {
     const movieId = ''+this.route.snapshot.paramMap.get('id');
     this.apiMovieService.getMovie(movieId)
     .subscribe(
-      data => {
-        this.movie = new Movie(
-          (data as any).title,
-          (data as any).release_date,
-          (data as any).runtime,
-          (data as any).overview,
-          (data as any).poster_path,
-          (data as any).vote_average,
-          (data as any).genres,
-        );
+      (data : Movie) => {
+        this.movie = {
+          id: (data as any).id,
+          title: (data as any).title,
+          year: (data as any).release_date,
+          duration: (data as any).runtime,
+          info: (data as any).overview,
+          pathPoster: (data as any).poster_path,
+          voteAvg: (data as any).vote_average,
+          genres: (data as any).genres,
+        }
       }
     );
   }
