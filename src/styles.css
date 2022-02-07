@@ -32,5 +32,14 @@ a{text-decoration: none; cursor: pointer;}
 .divSearcher{
     display:flex;
     flex-direction: row-reverse;
-    padding: 0 1.5em 1em;
+    padding: 1em 1.5em 1.25em;
 }
+
+a.button{
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    padding: 0.34em 0.25em 0.2em;
+    margin: 1.5em 2em;
+}
+
+a > span {vertical-align: bottom;}
